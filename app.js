@@ -12,6 +12,7 @@ function agregarAmigo(){
         }
 }
 
+
 //Mostrar la lista de amigos actualizada
 function imprimirLista(){
     let elementoLista = document.getElementById('listaAmigos');
@@ -25,5 +26,7 @@ function imprimirLista(){
 //Botón para sortear amigo
 function sortearAmigo(){
     let elementoResultado = document.getElementById('resultado');
-    elementoResultado.innerHTML = listaAmigos[Math.floor(Math.random()*listaAmigos.length)+1].toString();
+    let numeroAleatorio = parseInt(Math.floor(Math.random()*listaAmigos.length))+1;
+    console.log(typeof(numeroAleatorio));
+    elementoResultado.innerHTML = listaAmigos[numeroAleatorio].toString();
     }
